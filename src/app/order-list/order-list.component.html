@@ -1,0 +1,33 @@
+<div class="row row-cols-sm-4 mx-1">
+    <div  *ngFor="let list of orderData " >
+        <div class="card mb-4" style="width: 300px;  " >
+            <img src={{list.foodimg}} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><b>{{list.foodName}}</b></h5>
+             
+              <p class="card-text">{{list.foodPrice|currency:'INR'}}</p>
+              <button class="btn btn-primary" (click)="cancleToggleBtn(list.id)">Cancle Order</button>
+              
+            </div>
+     </div>
+    </div>
+    </div>
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="..." class="rounded me-2" alt="...">
+        <strong class="me-auto">Bootstrap</strong>
+        <small class="text-muted">11 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Hello, world! This is a toast message.
+      </div>
+    </div>
+
+    <!-- cancle order toggle button -->
+    <div *ngIf="cancleToggle" class="cancleBox">
+
+      <p>confirm your cancle</p>
+      <button (click)="yesBtn()">Yes</button>
+      <button (click)="noBtn()">No</button>
+    </div>

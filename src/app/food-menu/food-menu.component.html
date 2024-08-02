@@ -1,0 +1,49 @@
+<body >
+ 
+  <div  >
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"  #searchValue>
+            <button class="btn btn-outline-success" type="submit" (click)="getSearchValue(searchValue.value)">Search</button>
+          </form>
+        </div>
+      </nav>
+</div>
+<br><div class="row row-cols-sm-4 mx-1">
+<div  *ngFor="let menu of foodMenuData " >
+    <div class="card mb-4" style="width: 300px;  " >
+        <img src={{menu.img}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>{{menu.name}}</b></h5>
+         
+          <p class="card-text">{{menu.price|currency:'INR'}}</p>
+           <button class="btn btn-primary" (click)="orderData(menu.img,menu.name,menu.price)">Order Now</button>
+        </div>
+ </div>
+</div>
+</div>
+
+<!-- login mssage  -->
+<div class="loginMassage" *ngIf="loginMassageToggle">
+  <p>plese login your account</p> <span></span>
+ <p style="color: blue; cursor: pointer;" routerLink="/login"> Login</p>
+
+</div>
+
+<!-- order form  -->
+
+<div class="  possition-absulate " *ngIf="formBox">
+ <div  class="position-absolute top-0 start-50 form">
+  <form [formGroup]="orderForm">
+    
+   
+    <button [disabled]="orderForm.invalid" class="btn btn-primary mx-4" (click)="submit(orderForm.value)" > Order</button> <button class="btn btn-primary mx-4" (click)="orederCancle()">Cancle</button>
+  </form>
+ </div>
+ 
+</div>
+
+
+  
+</body>

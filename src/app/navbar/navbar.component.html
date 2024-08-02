@@ -1,0 +1,26 @@
+<ul class="nav justify-content-center ">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" >Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/foodMenu">Food Menu </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="myOrder"> My Order</a>
+    </li>
+    <li class="nav-item me-4">
+      <a class="nav-link disabled"   tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+    <li class="nav-item " >
+      <a class="nav-link login" routerLink="login"> LogIn</a>
+    </li>
+    <li>
+      <button type="button" class="btn   position-absolute ">
+        <i class="bi bi-truck" routerLink="/orderList"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" >
+           {{orderData.length}}+
+          <span class="visually-hidden">unread messages</span>
+        </span>
+      </button>
+    </li>
+  </ul>

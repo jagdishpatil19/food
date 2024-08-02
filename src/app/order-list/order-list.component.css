@@ -1,0 +1,9 @@
+.cancleBox{
+    border: 2px solid black;
+    width: 200px;
+    position:absolute;
+    top: 70px;
+    left: 500px;
+    background-color: aqua;
+    z-index: 1;
+}

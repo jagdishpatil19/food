@@ -1,0 +1,20 @@
+.nav {
+    background-color:rgba(255, 158, 1, 0.822);
+}
+
+button{
+    
+    position: absolute;
+     top: 10px;
+    left: 1180px;
+    font-size: 15px;
+}
+button i{
+    font-size: 25px;
+    position: relative;
+    bottom: 10px;
+}
+.login{
+    position: relative;
+    left: 300px;
+}

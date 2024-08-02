@@ -1,0 +1,26 @@
+<div class="leftSideBar">
+<div >
+    <div class="card mb-3 col-6" style="max-width: 540px;" *ngFor="let list of  myOrderList" >
+    <div class="row g-0" >
+      <div class="col-md-4">
+      <img src={{list.foodimg}} class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{list.foodName}}</h5>
+          <p class="card-text">{{list.foodPrice|currency:'INR'}}</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <button (click)="cancle(list.id)">Cancle</button>
+        </div>
+      </div>
+    </div>
+  </div></div>
+
+   
+</div>
+
+
+<div *ngFor="let list of myOrderList">
+  <p>{{list.foodPrice}}</p>
+
+</div>

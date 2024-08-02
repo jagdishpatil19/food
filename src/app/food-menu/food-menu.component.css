@@ -1,0 +1,35 @@
+body{
+    background-color: rgba(195, 191, 191, 0.447);
+    height:550px;
+    overflow: auto;
+}
+ 
+ 
+.card{
+    box-shadow: 2px 5px 10px black;
+}
+.form{
+    background-color: aqua;
+   /* position:absolute;
+   top: 100px;
+   left: 60%; */
+    width: 280px;
+    padding: 10px;
+}
+#inputPassword{
+    width: 200px;
+}
+span{
+    color: red;
+}
+ .loginMassage{
+    border: 2px solid black;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    position: absolute;
+    top: 100px;
+z-index: 1;
+ }
